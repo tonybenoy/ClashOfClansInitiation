@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Initiate Member</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.tag.label }}<br>
+            {{ form.tag(size=10) }}
+        </p>
+        <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=10) }}
+            </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
