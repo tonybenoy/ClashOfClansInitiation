@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "basef.html" %}
 {% block content %}
     <h1>Hi Clanmate !</h1>
     <table style="width:100%">
@@ -12,7 +12,10 @@
         <th><b>Donations Received</b></th>
         <th><b>Donation Ratio</b></th>
         <th><b>Current Rank</b></th>
+        {% if posts[1].clantag == "PU8J2RQ" %}
         <th><b>Initiated</b></th>
+        {% endif %}
+        
   </tr>
   {% for post in posts %}  
   <tr>
@@ -29,7 +32,9 @@
             <td> <font color="red">{{post.donation_ratio}}</font> </td>
         {% endif %}
         <td>{{post.clanRank}}</td>
+        {% if post.clantag == "PU8J2RQ" %}
         <td>{{post.init}}</td> 
+        {% endif %}
     </tr>
     {% endfor %}
 </table>

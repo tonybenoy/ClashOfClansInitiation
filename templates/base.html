@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }}</title>
+      {% else %}
+      <title>Apps</title>
+      {% endif %}
+      <style>
+            table, th, td {
+                border: 1px solid #00ff03;
+                border-collapse: collapse;
+
+            }
+            th, td {
+                padding: 15px;
+            }
+            body {
+            width: 60%;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+            background-color: #000000;
+            color: #00ff03;
+        }
+
+        .blink_text {
+
+            animation: 1s blinker linear infinite;
+            -webkit-animation: 1s blinker linear infinite;
+            -moz-animation: 1s blinker linear infinite;
+
+            color: #00ff03;
+        }
+
+        @-moz-keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @-webkit-keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1.0;
+            }
+        }
+            </style>
+    </head>
+    <body>
+        <div>
+        </div>
+            
+        {% block content %}{% endblock %}
+    </body>
+</html>

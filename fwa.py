@@ -1,1 +1,0 @@
-from FWA import app
