@@ -1,0 +1,1 @@
+from ClashOfClansInitiation import app
